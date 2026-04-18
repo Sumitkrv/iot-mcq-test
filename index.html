@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Pro - Certification Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="test-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="dot"></span>
+                <h2>IoT Exam Portal</h2>
+            </div>
+            <div id="question-palette" class="palette-grid"></div>
+            
+            <div class="palette-legend">
+                <div class="legend-item"><div class="box gray"></div> Unseen</div>
+                <div class="legend-item"><div class="box blue"></div> Answered</div>
+                <div id="result-legend" class="hidden">
+                    <div class="legend-item"><div class="box green"></div> Correct</div>
+                    <div class="legend-item"><div class="box red"></div> Incorrect</div>
+                </div>
+            </div>
+            <button id="submit-btn" class="main-submit">Finish Attempt</button>
+        </aside>
+
+        <main class="container">
+            <header class="sticky-header">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="label">Time Remaining</span>
+                        <span id="timer" class="value">60:00</span>
+                    </div>
+                </div>
+            </header>
+
+            <div id="quiz-container"></div>
+
+            <div id="results" class="hidden result-card">
+                <div class="result-header">
+                    <h2>Performance Analysis</h2>
+                    <p id="score-text"></p>
+                </div>
+                <button class="try-again-btn" onclick="location.reload()">
+                    <span>Restart Challenge</span>
+                </button>
+                <div id="review-section"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
